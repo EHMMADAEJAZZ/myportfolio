@@ -5,6 +5,7 @@ const Axios = axios.create({
   withCredentials: true,
   headers: {
     'Content-Type': 'application/json',
+    'Authorization':`Bearer ${localStorage.getItem('token')}`
   },
 });
 
@@ -36,6 +37,9 @@ export const userApis = {
   login: async (userData) => {
     try {
       const response = await Axios.post(`${appEndPoints.user}/login`, userData);
+      const accessToken = response?.data?.data?.accessToken;
+      localStorage.setItem('token', accessToken);
+      localStorage.setItem('refreshToken', response?.data?.data?.refreshToken);
       return response.data;
     } catch (error) {
       throw new Error(error?.response?.data?.message);
@@ -45,6 +49,7 @@ export const userApis = {
   logout: async () => {
     try {
       const response = await Axios.post(`${appEndPoints.user}/logout`);
+      localStorage.clear();
       return response?.data;
     } catch (error) {
       throw new Error(error?.response?.data?.message);

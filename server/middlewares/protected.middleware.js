@@ -7,6 +7,7 @@ export const protectedRoute = async (req, res, next) => {
     const token =
       req.cookies.accessToken ||
       req.headers?.authorization?.replace('Bearer ', '');
+      console.log(req.headers?.authorization?.replace('Bearer ', ''))
     if (!token) {
       return next(new ApiErrors(401, 'you are not Logged in'));
     }

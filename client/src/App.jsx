@@ -12,7 +12,6 @@ function App() {
   useEffect(()=>{
     fetchPortfolio()
   },[])
-
   return (
     <div className="overflow-hidden">
     <Header/>
