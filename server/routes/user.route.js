@@ -8,7 +8,7 @@ const userRoutes = Router();
 userRoutes.post("/register",registerUser);
 userRoutes.post('/verify-email',verifyEmail)
 userRoutes.post("/login",login);
-userRoutes.post("/forgot-password",forgetPassword)
+userRoutes.post("/change/password",forgetPassword)
 userRoutes.post("/reset-password",resetPassword)
 userRoutes.post("/logout",protectedRoute,logout);
 userRoutes.post("/refresh-token",protectedRoute,refreshAccessToken);
