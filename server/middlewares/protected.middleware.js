@@ -1,13 +1,13 @@
 import jwt from 'jsonwebtoken';
 import User from '../models/user.model.js';
-import { ApiErrors} from '../utils/apiErrors.js';
+import { ApiErrors } from '../utils/apiErrors.js';
 
 export const protectedRoute = async (req, res, next) => {
   try {
     const token =
       req.cookies.accessToken ||
       req.headers?.authorization?.replace('Bearer ', '');
-      console.log(req.headers?.authorization?.replace('Bearer ', ''))
+    console.log(req.headers?.authorization?.replace('Bearer ', ''));
     if (!token) {
       return next(new ApiErrors(401, 'you are not Logged in'));
     }
@@ -20,6 +20,8 @@ export const protectedRoute = async (req, res, next) => {
     req.user = user;
     next();
   } catch (error) {
-    return next(new ApiErrors(error.statusCode,"you are not Logged in" ||error.message));
+    return next(
+      new ApiErrors(error.statusCode, 'you are not Logged in' || error.message)
+    );
   }
 };
