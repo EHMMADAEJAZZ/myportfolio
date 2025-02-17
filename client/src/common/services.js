@@ -9,15 +9,15 @@ const Axios = axios.create({
 });
 
 const appEndPoints = {
-  user: '/api/v1/admin',
-  about: '/api/v1/about',
-  intro: '/api/v1/intro',
-  contact: '/api/v1/contact',
-  portfolio: '/api/v1/portfolio',
-  experience: '/api/v1/experience',
-  project: '/api/v1/project',
-  certification: '/api/v1/certification',
-  contactMe: '/api/v1/contact-me',
+  user: '/admin',
+  about: '/about',
+  intro: '/intro',
+  contact: '/contact',
+  portfolio: '/portfolio',
+  experience: '/experience',
+  project: '/project',
+  certification: '/certification',
+  contactMe: '/contact-me',
 };
 export const userApis = {
   refreshAccessToken: async (refreshAccessToken) => {
