@@ -1,5 +1,5 @@
 import {Router} from "express";
-import { auth, changePassword, forgetPassword, getMe, login, logout, refreshAccessToken, registerUser, resetPassword, verifyEmail } from "../controllers/auth.controller.js";
+import { auth, changePassword, getMe, login, logout, passwordforget, refreshAccessToken, registerUser, resetPassword, verifyEmail } from "../controllers/auth.controller.js";
 import { protectedRoute } from "../middlewares/protected.middleware.js";
 
 const userRoutes = Router();
@@ -8,7 +8,7 @@ const userRoutes = Router();
 userRoutes.post("/register",registerUser);
 userRoutes.post('/verify-email',verifyEmail)
 userRoutes.post("/login",login);
-userRoutes.post("/change/password",forgetPassword)
+userRoutes.post("/change/password",passwordforget)
 userRoutes.post("/reset-password",resetPassword)
 userRoutes.post("/logout",protectedRoute,logout);
 userRoutes.post("/refresh-token",protectedRoute,refreshAccessToken);

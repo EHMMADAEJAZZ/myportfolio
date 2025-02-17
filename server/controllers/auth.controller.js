@@ -178,9 +178,8 @@ export const changePassword = async (req, res, next) => {
 
 //forget password
 
-export const forgetPassword = async (req, res, next) => {
+export const passwordforget = async (req, res, next) => {
   const {email} = req.body;
-  console.log(email)
   try {
     if(!email){
       return next(new ApiErrors(400, 'Please provide your email'))
