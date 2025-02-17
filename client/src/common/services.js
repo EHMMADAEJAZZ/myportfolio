@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const Axios = axios.create({
-  baseURL: 'https://aijaz-ahmad-portfolio.vercel.app/api/v1',
+  baseURL: 'https://aijaz-ahmad-portfolio.vercel.app',
   withCredentials: true,
   headers: {
     'Content-Type': 'application/json',
@@ -9,15 +9,15 @@ const Axios = axios.create({
 });
 
 const appEndPoints = {
-  user: '/admin',
-  about: '/about',
-  intro: '/intro',
-  contact: '/contact',
-  portfolio: '/portfolio',
-  experience: '/experience',
-  project: '/project',
-  certification: '/certification',
-  contactMe: '/contact-me',
+  user: '/api/v1/admin',
+  about: '/api/v1/about',
+  intro: '/api/v1/intro',
+  contact: '/api/v1/contact',
+  portfolio: '/api/v1/portfolio',
+  experience: '/api/v1/experience',
+  project: '/api/v1/project',
+  certification: '/api/v1/certification',
+  contactMe: '/api/v1/contact-me',
 };
 export const userApis = {
   refreshAccessToken: async (refreshAccessToken) => {
