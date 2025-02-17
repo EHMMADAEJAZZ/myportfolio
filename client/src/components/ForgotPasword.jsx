@@ -33,7 +33,6 @@ const ForgotPasword = () => {
         setIsLoading(true);
         try {
           const response = await userApis.forgotPassword(email);
-          console.log(response);
           toast.success(response?.message)
           setMessage(response?.message)
           

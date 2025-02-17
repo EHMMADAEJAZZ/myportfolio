@@ -90,11 +90,10 @@ export const userApis = {
   },
   //forgotPassword
   forgotPassword: async (email) => {
-    console.log(email);
     try {
       const response = await Axios.post(
         `${appEndPoints.user}/change/password`,
-        email
+        {email}
       );
       return response.data;
     } catch (error) {
