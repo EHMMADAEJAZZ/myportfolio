@@ -93,7 +93,7 @@ export const userApis = {
     console.log(email);
     try {
       const response = await Axios.post(
-        `${appEndPoints.user}/forgot-password`,
+        `${appEndPoints.user}/change/password`,
         email
       );
       return response.data;
