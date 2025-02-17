@@ -9,7 +9,7 @@ const Intro = () => {
   }
   return (
     <section className=' min-h-[90vh] bg-primary '>
-      <div className='h-full container mx-auto flex flex-col items-start justify-center gap-2 sm:gap-8  p-10 lg:p-20 '>
+      <div className='h-full container mx-auto flex flex-col items-start justify-center gap-5 sm:gap-8 p-20 '>
         <h3 className='text-white text-base mt-10 lg:mt-2'>{introData?.welcomeText}</h3>
         <h3 className=' text-xl xs:text-3xl sm:text-4xl lg:text-6xl text-secondary font-semibold'>
           {introData?.firstName} {introData?.lastName}
