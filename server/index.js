@@ -25,7 +25,7 @@ app.use("/",(req,res)=>{
 })
 app.use(
   cors({
-    origin:[ process.env.FRONTEND_URL],
+    origin: process.env.FRONTEND_URL,
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
     optionSuccessStatus:200
