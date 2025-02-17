@@ -16,7 +16,7 @@ const SayHello = () => {
   }
   return (
     <section className=' min-h-[90vh] bg-primary '>
-      <div className='container mx-auto p-10 lg:p-20'>
+      <div className='container mx-auto p-20'>
         <SectionTitle title='Say Hello' />
         <div className="flex flex-col lg:flex-row my-10 gap-10">
             <div className="flex flex-col text-white gap-2 max-lg:order-2">

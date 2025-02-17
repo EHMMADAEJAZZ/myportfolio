@@ -7,7 +7,7 @@ const Courses = () => {
     const {certificationData}=UseAppContext();
   return (
     <section className=' min-h-[90vh] bg-primary '>
-      <div className='container mx-auto p-10 lg:p-20'>
+      <div className='container mx-auto p-20'>
         <SectionTitle title='Certifications' />
         <div className='w-full flex flex-col lg:flex-row my-10 gap-5 '>
           <div className='flex flex-row lg:flex-col gap-3 lg:gap-6 lg:border-l-2  lg:border-[#1b9e9827] w-full lg:w-1/3  max-lg:justify-between max-lg:overflow-x-scroll max-lg:p-2 overflow-hidden '>
