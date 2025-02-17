@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: 'Montserrat', serif;
+}
+
+/* scroll bar none */
+.scrollbar-none::-webkit-scrollbar {
+    display: none;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #0A192F;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #8888882b;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+i {
+    cursor: pointer;
+    font-size: 16px !important;
+}
+
+i:hover {
+    color: #ffffff;
+}
+
+.a1 {
+    animation: a1 1s infinite ease;
+}
+
+@keyframes a1 {
+    0% {
+        opacity: 1;
+    }
+
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+.a2 {
+    animation: a2 1s infinite ease;
+}
+
+@keyframes a2 {
+    0% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+.m {
+    animation: m 1s infinite ease;
+}
+
+@keyframes m {
+    0% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.active {
+    @apply border-tertiary text-blue-100
+}
