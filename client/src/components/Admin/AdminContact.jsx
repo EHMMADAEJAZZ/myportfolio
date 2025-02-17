@@ -34,9 +34,7 @@ const handleLangChange = (e) => {
   //handle delete skill
   const handleDeleteLanguage = (index) => {
     const language = [...editContact.languages];
-    console.log(index)
     language.splice(index, 1);
-    console.log(language)
     setEditContact((prev)=>{
       return {...prev, languages: language };
     });
