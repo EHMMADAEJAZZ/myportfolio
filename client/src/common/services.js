@@ -36,7 +36,9 @@ export const userApis = {
   //login
   login: async (userData) => {
     try {
-      const response = await Axios.post(`${appEndPoints.user}/login`, userData);
+      const response = await Axios.post(`${appEndPoints.user}/login`, userData,{
+        withCredentials: true,
+      });
       const accessToken = response?.data?.data?.accessToken;
       localStorage.setItem('token', accessToken);
       localStorage.setItem('refreshToken', response?.data?.data?.refreshToken);
