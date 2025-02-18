@@ -5,13 +5,17 @@ import Header from "./components/Header"
 import Footer from "./pages/Footer"
 import { useEffect } from 'react';
 import { UseAppContext } from './context/appContext';
+import Loader from './components/Loader';
 
 
 function App() {
-  const {fetchPortfolio}=UseAppContext()
+  const {fetchPortfolio,loading}=UseAppContext()
   useEffect(()=>{
     fetchPortfolio()
   },[])
+  if(loading){
+    return <Loader/>
+  }
   return (
     <div className="overflow-hidden">
     <Header/>
