@@ -15,6 +15,7 @@ function App() {
   return (
     <div className="overflow-hidden">
     <Header/>
+    
    <Outlet/>
         <Footer/>
   <ToastContainer
